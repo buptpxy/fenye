@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="normalAction" namespace="/" extends="struts-default">
+		<action name="Login" class="com.pxy.action.LoginAction" method="Login">
+			<result name="success">WEB-INF/LoginSuccess.jsp</result>
+			<result name="error">WEB-INF/login.jsp</result>
+		</action>
+		<action name="toRegister" class="com.pxy.action.RegisterAction">
+			<result name="success">WEB-INF/register.jsp</result>
+		</action>
+		<action name="Register" class="com.pxy.action.RegisterAction"
+			method="register">
+			<result name="success">WEB-INF/registerSuccess.jsp</result>
+			<result name="error">WEB-INF/register.jsp</result>
+		</action>
+		<action name="UserAdmin" class="com.pxy.action.UserAdmin">
+			<result name="success">WEB-INF/userList.jsp</result>
+		</action>
+		<action name="deleteUser" class="com.pxy.action.UserAdmin"
+			method="del">
+			<result name="success">WEB-INF/userList.jsp</result>
+		</action>
+		<action name="toModify" class="com.pxy.action.UserAdmin"
+			method="toModify">
+			<result name="success">WEB-INF/modify.jsp</result>
+		</action>
+		<action name="modify" class="com.pxy.action.UserAdmin" method="modify">
+			<result name="success">WEB-INF/userList.jsp</result>
+		</action>
+	</package>
+</struts>    
